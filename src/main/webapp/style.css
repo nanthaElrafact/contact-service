@@ -1,0 +1,43 @@
+@charset "ISO-8859-1";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+label {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: calc(50% - 5px);
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* Clearfix for handling wrapping */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
