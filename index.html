@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+    xmlns:vayana="http://www.thymeleaf.org" layout:decorator="__${applayout}__/default">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REQUEST TO GEHC MEDICAL AFFAIRS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-weight: bold;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .form-container>div {
+            width: 48%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input,
+        select,
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            color: #000000;
+            background-color: #ffffff;
+            box-sizing: border-box;
+            border: 1px solid #3eb049;
+            border-radius: 4px;
+        }
+
+        .submit-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            /* Make it take up the full width */
+        }
+
+        .submit-button {
+            padding: 10px 20px;
+            background-color: #3eb049;
+            color: #ffffff;
+            border: 1px solid #3eb049;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .additional-text {
+            text-align: left;
+            margin-top: 5px;
+            color: #000000;
+            margin-left: 0;
+            width: 100%;
+
+        }
+		.mandatory__required {
+            margin-left: 3px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+	<form id="myForm">
+    <h1 style="color: #3eb049;">REQUEST TO GEHC MEDICAL AFFAIRS</h1>
+    <div class="form-container">
+        <div>
+            <label for="geProduct" style="font-weight: bold;">GE HealthCare Product<span class="mandatory__required" aria-hidden="true">*</span></label>
+            <select id="geProduct" name="geProduct" required>
+	               <option value="" disabled selected>--Please Select--</option> 
+	               <option value="AdreView">AdreView</option>
+				   <option value="Ceretec">Ceretec</option>
+				   <option value="Cerianna">Cerianna</option>
+				   <option value="DaTQUANT">DaTQUANT</option>
+				   <option value="FastLab F">FastLab F</option>
+				   <option value="Thallous">Thallous</option>
+				   <option value="Visipaqu">Visipaqu</option>
+				   <option value="Vizamyl">Vizamyl</option>
+	            </select>
+            <label for="professionalDesignation" style="font-weight: bold;">Professional Designation<span class="mandatory__required " aria-hidden="true">*</span></label>
+            	<select id="professionalDesignation" name="professionalDesignation">
+	              <option value="" disabled selected>--Please Select--</option> 
+	               <option value="Nurse">Nurse</option>
+				   <option value="Pharmacist">Pharmacist</option>
+				   <option value="Physician">Physician</option>
+				   <option value="Other Healthcare Professional">Other Healthcare Professional</option>
+	           	</select>
+            <label for="hcpEmail" style="font-weight: bold;">HCP Email<span class="mandatory__required" aria-hidden="true">*</span></label>
+            <input type="email" id="hcpEmail" name="hcpEmail">
+            <label for="phoneExtension" style="font-weight: bold;">Phone/Extension<span class="mandatory__required" aria-hidden="true">*</span></label>
+            <input type="tel" id="phoneExtension" name="phoneExtension" pattern="[0-9]+">
+            <label for="address" style="font-weight: bold;">Address</label>
+            <input type="text" id="address" name="address" />
+            <label for="state" style="font-weight: bold;">State</label>
+            	<select id="state" name="state">
+	              <option value="" disabled selected>--Please Select--</option> 
+	               <option value="TamilNadu">TamilNadu</option>
+				   <option value="Kerala">Kerala</option>
+				   <option value="Karnataka">Karnataka</option>
+				   <option value="Telugana">Telugana</option>
+	            </select>
+            <label for="querySubmitted" style="font-weight: bold;">Query submitted by Sales
+            <span class="mandatory__required" aria-hidden="true">*</span></label>
+            <select id="querySubmitted" name="querySubmitted">
+	               <option value="" disabled selected>--Please Select--</option>
+	               <option value="Yes">Yes</option>
+	               <option value="No">No</option>
+	            </select>
+        </div>
+        <div>
+            <label for="requestType" style="font-weight: bold;">Request Type
+            <span class="mandatory__required" aria-hidden="true">*</span></label>
+            <select id="requestType" name="requestType">
+	               <option value="" disabled selected>--Please Select--</option> 
+	               <option value="Medical information">Medical information</option>
+				   <option value="Meeting with Medical Science Liaison/Medical Director">Meeting with Medical Science Liaison/Medical Director</option>
+				   <option value="Applications Training">Applications Training</option>
+	            </select>
+            <label for="hcpName" style="font-weight: bold;">HCP Name
+            <span class="mandatory__required" aria-hidden="true">*</span></label>
+            <input type="text" id="hcpName" name="hcpName">
+            <label for="facilityAffiliation" style="font-weight: bold;">Facility/Affiliation<span class="mandatory__required" aria-hidden="true">*</span></label>
+            <input type="text" id="facilityAffiliation" name="facilityAffiliation">
+            <label for="department" style="font-weight: bold;">Department</label>
+            <input type="text" id="department" name="department">
+            <label for="city" style="font-weight: bold;">City<span class="mandatory__required" aria-hidden="true">*</span></label>
+            <input type="text" id="city" name="city">
+            <label for="zip" style="font-weight: bold;">Zip<span class="mandatory__required" aria-hidden="true">*</span></label>
+            <input type="text" id="zip" name="zip">
+            <label for="specificInformation" style="font-weight: bold;">Describe the specific information requested:<span class="mandatory__required" aria-hidden="true">*</span></label>
+            <textarea id="specificInformation" name="specificInformation" rows="8" class="specific-info-textarea"></textarea>
+
+        </div>
+    </div>
+    <div class="additional-text">
+       <span style="font-weight: bold;"> Medical Affairs Request:</span> The following must be completed using the Requestor's own words and/or with the Requestor's consent.
+    </div>
+    <div class="submit-container">
+        <button type="submit" class="submit-button" id="submitBtn" name="submitBtn" style="font-weight: bold;">Submit</button>
+    </div>
+	</form>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const formData = {
+                healthCareProduct: document.getElementById('geProduct').value,
+                designation: document.getElementById('professionalDesignation').value,
+                hcpEmail: document.getElementById('hcpEmail').value,
+                phone:document.getElementById('phoneExtension').value,
+                address: document.getElementById('address').value,
+                state:document.getElementById('state').value,
+                querySubmit:document.getElementById('querySubmitted').value,
+                requsetType:document.getElementById('requestType').value,
+                hcpName:document.getElementById('hcpName').value,
+                facility:document.getElementById('facilityAffiliation').value,
+                department:document.getElementById('department').value,
+                city:document.getElementById('city').value,
+                zip:document.getElementById('zip').value,
+                description: document.getElementById('specificInformation').value,
+            };
+			console.log(formData);
+
+            fetch('http://localhost:9090/api/v1/healthCare/add', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+                .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.status === 'ok' && data.message === 'User Created Successfully') {
+            console.log('User created successfully');
+        } else {
+            throw new Error('Unexpected server response');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error.message);
+    });
+        });
+    </script>
+</body>
+
+</html>
