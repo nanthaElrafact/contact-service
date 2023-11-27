@@ -72,6 +72,9 @@ public class Contacts {
 	@Column(name = "DESCRIPTION")
 	private String description;
 	
+	@Column(name = "SIGNATURE")
+	private String signature;
+	
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "CREATE_DATE")
 	private Date createDate;

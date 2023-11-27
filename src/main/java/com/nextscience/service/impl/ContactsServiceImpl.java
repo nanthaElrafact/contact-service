@@ -1,6 +1,7 @@
 package com.nextscience.service.impl;
 
 import java.time.LocalDateTime;
+import java.util.Base64;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,6 +67,14 @@ public class ContactsServiceImpl implements ContactsService {
 
 	@Override
 	public String add(ContactsReqDto request) {
+		String base64Data = request.getSignature().split(",")[1];
+        byte[] decodedBytes = java.util.Base64.getDecoder().decode(base64Data);
+
+
+		String encodedSignatureData = Base64.getEncoder().encodeToString(decodedBytes);
+
+		// Convert signature data to a byte array
+	//	byte[] signatureBytes = Base64.getDecoder().decode(signatureData);
 		Date now = new Date();
 		var contacts = Contacts.builder().healthCareProduct(request.getHealthCareProduct()).
 				requsetType(request.getRequsetType()).designation(request.getDesignation()).
@@ -73,7 +82,7 @@ public class ContactsServiceImpl implements ContactsService {
 				phone(request.getPhone()).
 				department(request.getDepartment()).address(request.getAddress()).city(request.getCity()).
 				state(request.getState()).zip(request.getZip()).querySubmit(request.getQuerySubmit()).
-				description(request.getDescription()).
+				description(request.getDescription()).signature(encodedSignatureData).
 				createDate(now).updateDate(null).build();
 		contactsRepository.save(contacts);
 		log.info("Saved user");

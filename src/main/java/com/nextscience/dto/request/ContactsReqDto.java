@@ -1,5 +1,6 @@
 package com.nextscience.dto.request;
 
+import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -36,4 +37,6 @@ public class ContactsReqDto {
 	private String querySubmit;
 	
 	private String description;
+	
+	private String signature;
 }
