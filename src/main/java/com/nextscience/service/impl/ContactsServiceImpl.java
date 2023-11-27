@@ -77,7 +77,7 @@ public class ContactsServiceImpl implements ContactsService {
 	//	byte[] signatureBytes = Base64.getDecoder().decode(signatureData);
 		Date now = new Date();
 		var contacts = Contacts.builder().healthCareProduct(request.getHealthCareProduct()).
-				requsetType(request.getRequsetType()).designation(request.getDesignation()).
+				requestType(request.getRequestType()).designation(request.getDesignation()).
 				hcpName(request.getHcpName()).hcpEmail(request.getHcpEmail()).facility(request.getFacility()).
 				phone(request.getPhone()).
 				department(request.getDepartment()).address(request.getAddress()).city(request.getCity()).

@@ -12,7 +12,7 @@ public class ContactsReqDto {
 	
 	private String healthCareProduct;
 	
-	private String requsetType;
+	private String requestType;
 
 	private String designation;
 

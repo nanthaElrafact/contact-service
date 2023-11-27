@@ -33,8 +33,8 @@ public class Contacts {
 	@Column(name = "HEALTH_CARE_PRODUCT")
 	private String healthCareProduct;
 
-	@Column(name = "REQUSET_TYPE")
-	private String requsetType;
+	@Column(name = "REQUEST_TYPE")
+	private String requestType;
 
 	@Column(name = "DESIGNATION")
 	private String designation;
