@@ -20,44 +20,45 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-//@Table(name = "CONTACTS", schema = "dbo")
+@Table(name = "TRN_MED_AFFAIRS_REQUEST", schema = "dbo")
 @JsonIgnoreProperties(ignoreUnknown = true)
-//@Entity
-public class Contacts {
+@Entity
+public class MedAffairsRequest {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "TRN_MA_REQ_ID")
-	private Integer contactId;
+	private Integer trnMaReqId;
 
 	@Column(name = "PRODUCT_NAME")
-	private String healthCareProduct;
+	private String productName;
 	
-	private String MA_REQ_CATG;
+	@Column(name = "MA_REQ_CATG")
+	private String maReqCatg;
 
 	@Column(name = "MA_REQ_TYPE")
-	private String requestType;
+	private String maReqType;
 
 	@Column(name = "PROF_DESG")
 	private String designation;
 
-	private String HCP_FIRST_NAME;
+	@Column(name = "HCP_FIRST_NAME")
+	private String hcpFirstName;
 	
-	private String HCP_LAST_NAME;
+	@Column(name = "HCP_LAST_NAME")
+	private String hcpLastName;
 	
 	@Column(name = "HCP_NAME")
 	private String hcpName;
 	
-	private String NPI;
+	@Column(name = "NPI")
+	private String npi;
 
 	@Column(name = "HCP_EMAIL")
 	private String hcpEmail;
 	
-	
-	private String ACCOUNT_NAME;
-
-	@Column(name = "FACILITY")
-	private String facility;
+	@Column(name = "ACCOUNT_NAME")
+	private String accountName;
 
 	@Column(name = "PHONE")
 	private String phone;
@@ -77,10 +78,8 @@ public class Contacts {
 	@Column(name = "ZIP")
 	private String zip;
 	
-	private String SALES_REP_EMAIL;
-
-	@Column(name = "QUERY_SUBMIT")
-	private String querySubmit;
+	@Column(name = "SALES_REP_EMAIL")
+	private String salesRepEmail;
 
 	@Column(name = "COMMENTS")
 	private String description;
@@ -88,21 +87,27 @@ public class Contacts {
 	@Column(name = "SIGNATURE")
 	private String signature;
 	
-	private String SIGNATURE_OF;
+	@Column(name = "SIGNATURE_OF")
+	private String signatureOf;
 	
-	private String MA_REQ_STATUS;
+	@Column(name = "MA_REQ_STATUS")
+	private String maReqStatus;
 	
-	private String USER_ID;
+	@Column(name = "USER_ID")
+	private String userId;
 	
-	private Date SUBMITTED_DATE;
+	@Column(name = "SUBMITTED_DATE")
+	private Date submittedDate;
 	
-	private String CREATED_USER;
+	@Column(name = "CREATED_USER")
+	private String createdUser;
 	
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "CREATED_DATE")
 	private Date createDate;
 	
-	private String UPDATED_USER;
+	@Column(name = "UPDATED_USER")
+	private String updatedUser;
 	
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "UPDATED_DATE")
