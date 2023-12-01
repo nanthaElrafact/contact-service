@@ -26,38 +26,50 @@ public class MedAffairsRequestServiceImpl implements MedAffairsRequestService {
 	@Transactional
 	public String addMedAffReq(MedAffairsReqDto req) {
 		StoredProcedureQuery query = entityManager.createStoredProcedureQuery("usp_Med_Affairs_Req_Add_Web");
+		
 		query.registerStoredProcedureParameter("USER", String.class, ParameterMode.IN);
-		query.registerStoredProcedureParameter("PRODUCT_NAME", Integer.class, ParameterMode.IN);
-				query.registerStoredProcedureParameter("MA_REQ_CATG", Integer.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("PRODUCT_NAME", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("MA_REQ_CATG", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("HCP_FIRST_NAME", Integer.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("HCP_LAST_NAME", Integer.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("NPI", Integer.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("HCP_EMAIL", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("ACCOUNT_NAME", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("Phone", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("Department", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("ADDRESS", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("City", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("State", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("Zip", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("MA_REQ_TYPE", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("Sales_REP_EMail", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("COMMENTS", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("SIGNATURE", String.class, ParameterMode.IN);
+		query.registerStoredProcedureParameter("SIGNATURE_OF", String.class, ParameterMode.IN);
+		
+		query.setParameter("USER", "demo User");
+		query.setParameter("PRODUCT_NAME", req.getProductName());
+		query.setParameter("MA_REQ_CATG", req.getMedAffReqCat());
+		query.setParameter("HCP_FIRST_NAME", req.getHcpName());
+		query.setParameter("HCP_LAST_NAME", "");
+		query.setParameter("NPI","");
+		query.setParameter("HCP_EMAIL",req.getHcpEmail());
+		query.setParameter("ACCOUNT_NAME", req.getFacility());
+		query.setParameter("Phone", req.getPhone());
+		query.setParameter("Department", req.getDepartment());
+		query.setParameter("ADDRESS", req.getAddress());
+		query.setParameter("City", req.getCity());
+		query.setParameter("State", req.getState());
+		query.setParameter("Zip", req.getZip());
+		query.setParameter("MA_REQ_TYPE","");
+		query.setParameter("Sales_REP_EMail","");
+		query.setParameter("COMMENTS", req.getDescription());
+		query.setParameter("SIGNATURE", "");
+		query.setParameter("SIGNATURE_OF", "");
 
-				query.registerStoredProcedureParameter("PROF_ID", Integer.class, ParameterMode.IN);
-				//query.registerStoredProcedureParameter("HCP_ID", Integer.class, ParameterMode.IN);
-				query.registerStoredProcedureParameter("SIGNATURE_FLAG", Integer.class, ParameterMode.IN);
-				query.registerStoredProcedureParameter("SIGNATURE_DATE", Date.class, ParameterMode.IN);
-				query.registerStoredProcedureParameter("FIRST_NAME", String.class, ParameterMode.IN);
-				query.registerStoredProcedureParameter("MIDDLE_NAME", String.class, ParameterMode.IN);
-				query.registerStoredProcedureParameter("LAST_NAME", String.class, ParameterMode.IN);
-				query.registerStoredProcedureParameter("NPI", String.class, ParameterMode.IN);
-				
-				
-				
-				query.setParameter("USER", req.getUpdatedUser());
-				query.setParameter("TRN_FAX_ID", req.getTrnFaxId());
-		        query.setParameter("TRN_RX_ID", req.getTrnRxId());
+		query.execute();
 
-				query.setParameter("PROF_ID", req.getProfId());
-				//query.setParameter("HCP_ID", req.getHcpId());
-				query.setParameter("SIGNATURE_FLAG", req.getSignature_Flag());
-				query.setParameter("SIGNATURE_DATE", req.getSignature_Date());
-				query.setParameter("FIRST_NAME", req.getFirstName());
-				query.setParameter("MIDDLE_NAME", req.getMiddleName());
-				query.setParameter("LAST_NAME", req.getLastName());
-				query.setParameter("NPI", req.getNpi());
-
-				
-				query.execute();
-
-			return "updated Successfully";
+		return "updated Successfully";
 	}
 
 }

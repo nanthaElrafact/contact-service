@@ -7,7 +7,7 @@ public class MedAffairsReqDto {
 	
 	private String user;
 	
-	private String healthCareProduct;
+	private String productName;
 	
 	private String medAffReqCat;
 
