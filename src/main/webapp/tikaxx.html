@@ -2,121 +2,121 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Integra Form</title>
-<!-- Include Signature Pad library -->
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
-<style>
-#signature-pad {
-	border: 1px solid #ccc;
-	width: 100%;
-	max-width: 400px;
-	margin: 10px 0;
-}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Integra Form</title>
+	<!-- Include Signature Pad library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+	<style>
 
-.signature-pad {
-	position: relative;
-}
+		#signature-pad {
+			border: 1px solid #ccc;
+			width: 100%;
+			max-width: 400px;
+			margin: 10px 0;
+		}
 
-.signature-pad canvas {
-	border: 1px solid #ccc;
-	width: 100%;
-	max-width: 100%;
-}
+		.signature-pad {
+			position: relative;
+		}
 
-.center {
-	margin: auto;
-	width: 70%;
-}
+		.signature-pad canvas {
+			border: 1px solid #ccc;
+			width: 100%;
+			max-width: 100%;
+		}
 
-div.a {
-	text-align: center;
-}
+		.center {
+			margin: auto;
+			width: 70%;
+		}
 
-div.a1 {
-	text-align: center;
-	color: #1b294e;
-	font-size: 30px;
-}
+		div.a {
+			text-align: center;
+		}
 
-div.a2 {
-	text-align: center;
-	color: red;
-	font-size: 20px;
-}
+		div.a1 {
+			text-align: center;
+			color: #1b294e;
+			font-size: 30px;
+		}
 
-div.b2 {
-	text-align: left;
-	color: red;
-	font-size: 20px;
-}
+		div.a2 {
+			text-align: center;
+			color: red;
+			font-size: 20px;
+		}
 
-div.o {
-	text-align: left;
-	color: orange;
-	font-size: 14px;
-}
+		div.b2 {
+			text-align: left;
+			color: red;
+			font-size: 20px;
+		}
 
-div.b {
-	text-align: left;
-}
+		div.o {
+			text-align: left;
+			color: orange;
+			font-size: 14px;
+		}
 
-div.c {
-	text-align: right;
-}
+		div.b {
+			text-align: left;
+		}
 
-div.d {
-	text-align: justify;
-}
+		div.c {
+			text-align: right;
+		}
 
-.left {
-	float: left;
-	width: 50%;
-}
+		div.d {
+			text-align: justify;
+		}
 
-select {
-	width: 80%;
-	padding: 16px 20px;
-	border: none;
-	border-radius: 4px;
-	background-color: #f1f1f1;
-}
+		.left {
+			float: left;
+			width: 50%;
+		}
 
-input {
-	width: 80%;
-	padding: 16px 20px;
-	border: none;
-	border-radius: 4px;
-	background-color: #f1f1f1;
-}
+		select {
+			width: 80%;
+			padding: 16px 20px;
+			border: none;
+			border-radius: 4px;
+			background-color: #f1f1f1;
+		}
 
-textarea {
-	width: 80%;
-	padding: 16px 20px;
-	border: none;
-	border-radius: 4px;
-	background-color: #f1f1f1;
-}
+		input {
+			width: 80%;
+			padding: 16px 20px;
+			border: none;
+			border-radius: 4px;
+			background-color: #f1f1f1;
+		}
 
-input.s {
-	width: 100%;
-	color: orange;
-	font-weight: bold;
-	font-size: 20px;
-}
+		textarea {
+			width: 80%;
+			padding: 16px 20px;
+			border: none;
+			border-radius: 4px;
+			background-color: #f1f1f1;
+		}
 
-.mandatory__required {
-	margin-left: 3px;
-	color: red;
-}
+		input.s {
+			width: 100%;
+			color: orange;
+			font-weight: bold;
+			font-size: 20px;
+		}
 
-.error-message {
-	color: red;
-	font-size: 14px;
-}
-</style>
+		.mandatory__required {
+			margin-left: 3px;
+			color: red;
+		}
+
+		.error-message {
+			color: red;
+			font-size: 14px;
+		}
+	</style>
 </head>
 
 <body>
@@ -148,26 +148,31 @@ input.s {
 		<br>
 		<br>
 		<br>
-		<form action="/submit" method="post" class="center"
-			id="healthCareForm">
+		<form action="/submit" method="post" class="center" autocomplete="off" id="healthCareForm">
 			<br>
 			<div class="left">
-				<label for="geProduct">Product:<span
-					class="mandatory__required" aria-hidden="true">*</span></label><br> <select
-					id="geProduct" name="geProduct" required>
-					<option value="option1">Option 1</option>
-					<option value="option2">Option 2</option>
-					<option value="option3">Option 3</option>
-					<option value="option4">Option 4</option>
+				<label for="geProduct">Product:<span class="mandatory__required" aria-hidden="true">*</span></label><br>
+				<select id="geProduct" name="geProduct" required>
+				<option value="">--Please select--</option>
+					<option value="Ceretec">Ceretec</option>
+					<option value="AdreView">AdreView</option>
+					<option value="Cerianna">Cerianna</option>
+					<option value="Clariscan">Clariscan</option>
+					<option value="DaTQUANT">DaTQUANT</option>
+					<option value="DaTscan">DaTscan</option>
+					<option value="DMSA">DMSA</option>
+					<option value="Fastlab">Fastlab</option>
+					<option value="Indium 111">Indium 111</option>
 				</select> <span id="geProduct-error" class="error-message"></span>
 			</div>
 			<div class="left">
-				<label for="requestType">Request Type:<span
-					class="mandatory__required" aria-hidden="true">*</span></label><br> <select
-					id="requestType" name="requestType">
-					<option value="option1">Medical Information</option>
-					<option value="option2">Applications Training</option>
-					<option value="option3">Meeting with Medical Science
+				<label for="requestType">Request Type/Category:<span class="mandatory__required"
+						aria-hidden="true">*</span></label><br> <select id="requestType" name="requestType">
+						<option value="">--Please select--</option>
+					<option value="Medical Information">Medical Information</option>
+					<option value="Applications Training">Applications Training</option>
+					<option value="Meeting with Medical Science
+						Liaison">Meeting with Medical Science
 						Liaison</option>
 				</select> <span id="requestType-error" class="error-message"></span>
 			</div>
@@ -179,21 +184,21 @@ input.s {
 			<div class="left">
 				<label for="professionalDesignation">Professional
 					Designation<span class="mandatory__required" aria-hidden="true">*</span>
-				</label><br> <select id="professionalDesignation"
-					name="professionalDesignation">
-					<option value="option1">Nurse</option>
-					<option value="option2">Pharmacist</option>
-					<option value="option3">Physician</option>
-					<option value="option4">Other Healthcare Professional</option>
+				</label><br> <select id="professionalDesignation" name="professionalDesignation">
+				<option value="">--Please select--</option>
+					<option value="Nurse">Nurse</option>
+					<option value="Pharmacist">Pharmacist</option>
+					<option value="Physician">Physician</option>
+					<option value="Other Healthcare Professional">Other Healthcare Professional</option>
 				</select> <span id="professionalDesignation-error" class="error-message"></span>
 			</div>
 			<div class="left">
-				<label for="state">State</label><br> <select id="state"
-					name="state">
-					<option value="option1">Option 1</option>
-					<option value="option2">Option 2</option>
-					<option value="option3">Option 3</option>
-					<option value="option4">Option 4</option>
+				<label for="state">State</label><br> <select id="state" name="state">
+				<option value="">--Please select--</option>
+					<option value="Alaska">Alaska</option>
+					<option value="California">California</option>
+					<option value="Colorado">Colorado</option>
+					<option value="Georgia">Georgia</option>
 				</select> <span id="state-error" class="error-message"></span>
 			</div>
 			<br>
@@ -201,72 +206,97 @@ input.s {
 			<br> <br>
 			<br>
 			<br>
-			<!-- Repeat the above code for dropdowns 2, 3, and 4 -->
 			<div>
 				<div class="left">
-					<label for="hcpName">HCP Name<span
-						class="mandatory__required" aria-hidden="true">*</span></label><br> <input
-						type="text" id="hcpName" name="hcpName" maxlength="5" required>
+					<label for="hcpName">HCP First Name<span class="mandatory__required"
+							aria-hidden="true">*</span></label><br> <input type="text" id="hcpName" name="hcpName"
+						maxlength="5" required>
 					<span id="hcpName-error" class="error-message"></span>
 				</div>
 				<div class="left">
-					<label for="hcpEmail">HCP Email<span
-						class="mandatory__required" aria-hidden="true">*</span></label><br> <input
-						type="email" id="hcpEmail" name="text1"> <span
-						id="hcpEmail-error" class="error-message"><br>
+					<label for="hcpLastName">HCP Last Name</label><br> <input type="text" id="hcpLastName" name="hcpLastName"
+						maxlength="5" required>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br> <br>
+			<br>
+			<br>
+			<div>
+				<div class="left">
+					<label for="hcpEmail">HCP Email<span class="mandatory__required"
+							aria-hidden="true">*</span></label><br> <input type="email" id="hcpEmail" name="text1">
+					<span id="hcpEmail-error" class="error-message"></span><br>
 					<br>
 					<br>
 				</div>
+				<div class="left">
+					<label for="facilityAffiliation">Facility<span class="mandatory__required"
+							aria-hidden="true">*</span></label><br> <input type="text" id="facilityAffiliation"
+						name="facilityAffiliation">
+					<span id="facilityAffiliation-error" class="error-message"></span>
+				</div>
 			</div>
-			<div class="left">
-				<label for="facilityAffiliation">Facility<span
-					class="mandatory__required" aria-hidden="true">*</span></label><br> <input
-					type="text" id="facilityAffiliation" name="facilityAffiliation">
-				<span id="facilityAffiliation-error" class="error-message"></span>
-			</div>
-			<div class="left">
-				<label for="phoneExtension">Phone<span
-					class="mandatory__required" aria-hidden="true">*</span></label><br> <input
-					type="tel" id="phoneExtension" name="phoneExtension"
-					pattern="^[0-9\-]+$" required
-					oninput="if(!this.value.match('^[0-9\-]+$')) this.value='';"
-					maxlength='10' autocomplete='off' onkeyup="numbersonly(this)">
 				<br>
+			<br>
+			<br> <br>
+			<br>
+			<br>
+			<div>
+				<div class="left">
+					<label for="phoneExtension">Phone<span class="mandatory__required"
+							aria-hidden="true">*</span></label><br> <input type="tel" id="phoneExtension"
+						name="phoneExtension" pattern="^[0-9\-]+$" required
+						oninput="if(!this.value.match('^[0-9\-]+$')) this.value='';" maxlength='10' autocomplete='off'
+						onkeyup="numbersonly(this)">
+					<br>
+					<br>
+					<span id="phoneExtension-error" class="error-message"><br>
+				</div>
+				<div class="left">
+					<label for="department">Department</label><br> <input type="text" id="department"
+						name="department"><span id="department-error" class="error-message"></span>
+				</div>
+			</div>
 				<br>
-				<span id="phoneExtension-error" class="error-message"><br>
+			<br>
+			<br> <br>
+			<br>
+			<br>
+			<div>
+				<div class="left">
+					<label for="address">Address</label><br> <input type="text" id="address" name="address"> <br>
+					<br>
+					<br>
+				</div>
+				<div class="left">
+					<label for="city">City<span class="mandatory__required" aria-hidden="true">*</span></label><br>
+					<input type="text" id="city" name="city"><span id="city-error" class="error-message"></span>
+				</div>
 			</div>
-			<div class="left">
-				<label for="department">Department</label><br> <input
-					type="text" id="department" name="department"><span
-					id="department-error" class="error-message"></span>
-			</div>
-			<div class="left">
-				<label for="address">Address</label><br> <input type="text"
-					id="address" name="address"> <br>
 				<br>
+			<br>
+			<br> <br>
+			<br>
+			<br>
+			<div>
+				<div class="left">
+					<label for="zip">Zip<span class="mandatory__required" aria-hidden="true">*</span></label><br> <input
+						type="text" id="zip" name="zip" pattern="^[1-9][0-9]*$" required
+						oninput="if(!this.value.match('^[1-9][0-9]*$'))this.value='';" maxlength='10' autocomplete='off'
+						onkeyup="numbersonly(this)"><span id="zip-error" class="error-message"></span>
+				</div>
+			</div>
 				<br>
-			</div>
-			<div class="left">
-				<label for="city">City<span class="mandatory__required"
-					aria-hidden="true">*</span></label><br> <input type="text" id="city"
-					name="city"><span id="city-error" class="error-message"></span>
-			</div>
-			<div class="left">
-				<label for="zip">Zip<span class="mandatory__required"
-					aria-hidden="true">*</span></label><br> <input type="text" id="zip"
-					name="zip" pattern="^[1-9][0-9]*$" required
-					oninput="if(!this.value.match('^[1-9][0-9]*$'))this.value='';"
-					maxlength='10' autocomplete='off' onkeyup="numbersonly(this)"><span
-					id="zip-error" class="error-message"></span>
-			</div>
+			<br>
 			<br>&nbsp;
 			<div>
 				<br> <label for="querySubmitted"><br>Query
-					submitted by Sales<span class="mandatory__required"
-					aria-hidden="true">*</span></label><br> <select id="querySubmitted"
-					name="querySubmitted">
-					<option value="option1">Yes</option>
-					<option value="option2">No</option>
+					submitted by Sales<span class="mandatory__required" aria-hidden="true">*</span></label><br> <select
+					id="querySubmitted" name="querySubmitted">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
 				</select> <span id="querySubmitted-error" class="error-message"></span>
 			</div>
 			<br>
@@ -277,8 +307,7 @@ input.s {
 			<br>
 			<div>
 				<br> <label for="message">Describe the specific
-					information requested<span class="mandatory__required"
-					aria-hidden="true">*</span>
+					information requested<span class="mandatory__required" aria-hidden="true">*</span>
 				</label><br>
 				<textarea id="message" name="message" rows="10" cols="30"></textarea>
 				<span id="message-error" class="error-message"></span>
@@ -296,146 +325,148 @@ input.s {
 				<input type="hidden" name="signature_data" id="signature_data">
 				<br>
 			</div>
-			<br>&nbsp;<br> <input type="submit" value="Submit"
-				class="s" id="submitBtn">
+			<br>&nbsp;<br> <input type="submit" value="Submit" class="s" id="submitBtn">
 			<script>
-            function numbersonly(input) {
-                var filter = /[^0-9]/g;
-                input.value = input.value.replace(filter, "");
-            }
-            
-            // Initialize Signature Pad
-            var canvas = document.querySelector("canvas");
-            var signaturePad = new SignaturePad(canvas);
-            
-            // Clear Signature
-            document.getElementById("clear-signature").addEventListener("click", function () {
-                signaturePad.clear();
-            });
-            
-            // Get signature data on form submit
-            document.getElementById("submitBtn").addEventListener("click", function (event) {
-                event.preventDefault();
-                // removeErrorMessages();
-                // Validation checks
-                if (!validateForm()) {
-                    return;
-                }
-            		const signatureCanvas = document.querySelector("canvas");
-            		const signatureData = signaturePad.toDataURL();
-                const formData = {
-					//newSignatureData : signatureData;
-                	productName: document.getElementById("geProduct").value,
-                    designation: document.getElementById("professionalDesignation").value,
-                    hcpEmail: document.getElementById("hcpEmail").value,
-                    phone: document.getElementById("phoneExtension").value,
-                    address: document.getElementById("address").value,
-                    state: document.getElementById("state").value,
-                    querySubmit: document.getElementById("querySubmitted").value,
-                    medAffReqCat: document.getElementById("requestType").value,
-                    hcpName: document.getElementById("hcpName").value,
-                    facility: document.getElementById("facilityAffiliation").value,
-                    department: document.getElementById("department").value,
-                    city: document.getElementById("city").value,
-                    zip: document.getElementById("zip").value,
-                    description: document.getElementById("message").value,
-					signature: signatureData,
-                };
-                console.log(formData);
-                fetch("http://localhost:9090/api/v1/medAffair/add", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(formData),
-                })
-                    .then((response) => {
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! Status: ${response.status}`);
-                        }
-                        return response.json();
-                    })
-                    .then((data) => {
-                        if (data.status === "ok" && data.message === "User Created Successfully") {
-                            console.log("User created successfully");
-                        } else {
-                            throw new Error("Unexpected server response");
-                        }
-                    })
-                    .catch((error) => {
-                        console.error("Error:", error.message);
-                    });
-            });
-            
-            // Validation function
-            function validateForm() {
-                 removeErrorMessages(); // Clear existing error messages
-                const mandatoryFields = [
-                    "geProduct",
-                    "requestType",
-                    "professionalDesignation",
-                    "hcpName",
-                    "hcpEmail",
-                    "facilityAffiliation",
-                    "phoneExtension",
-                    "city",
-                    "zip",
-                    "querySubmitted",
-                    "message",
-                ];
-                let isValid = true;
-            
-                for (const fieldId of mandatoryFields) {
-                    const field = document.getElementById(fieldId);
-                    const errorSpan = document.getElementById(`${fieldId}-error`);
-            
-                    if (!field.value.trim()) {
-                        displayErrorMessage(errorSpan, `${getFieldLabel(fieldId)} is a mandatory field and cannot be empty.`);
-                        isValid = false;
-                    }
-                }
-            
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                const hcpEmail = document.getElementById("hcpEmail").value;
-                const emailErrorSpan = document.getElementById("hcpEmail-error");
-                if (!emailRegex.test(hcpEmail)) {
-                    displayErrorMessage(emailErrorSpan, "Invalid email format in HCP Email field.");
-                    isValid = false;
-                }
-            
-                const phoneRegex = /^[0-9]{10}$/;
-                const phoneExtension = document.getElementById("phoneExtension").value;
-                const phoneErrorSpan = document.getElementById("phoneExtension-error");
-                if (!phoneRegex.test(phoneExtension)) {
-                    displayErrorMessage(phoneErrorSpan, "Invalid phone format in Phone field.");
-                    isValid = false;
-                }
-            
-                return isValid;
-            }
-            
-            // Function to display error message
-             function displayErrorMessage(element, message) {
-                    if (element) {
-                        element.textContent = message;
-                        element.style.display = "block";
-                    } else {
-                        console.error("Element is null or undefined");
-                    }
-                }
-            
-                // Function to remove error messages
-                function removeErrorMessages() {
-                    const errorSpans = document.querySelectorAll('.error-message');
-                    errorSpans.forEach(span => span.textContent = '');
-                }
-            
-                // Function to get field label
-                function getFieldLabel(fieldId) {
-                    const labelElement = document.querySelector(`label[for="${fieldId}"]`);
-                    return labelElement ? labelElement.textContent : fieldId;
-                }
-         </script>
+				function numbersonly(input) {
+					var filter = /[^0-9]/g;
+					input.value = input.value.replace(filter, "");
+				}
+
+				// Initialize Signature Pad
+				var canvas = document.querySelector("canvas");
+				var signaturePad = new SignaturePad(canvas);
+
+				// Clear Signature
+				document.getElementById("clear-signature").addEventListener("click", function () {
+					signaturePad.clear();
+				});
+
+				// Get signature data on form submit
+				document.getElementById("submitBtn").addEventListener("click", function (event) {
+					event.preventDefault();
+					// removeErrorMessages();
+					// Validation checks
+					if (!validateForm()) {
+						return;
+					}
+					const signatureCanvas = document.querySelector("canvas");
+					const signatureData = signaturePad.toDataURL();
+					const formData = {
+						//newSignatureData : signatureData;
+						productName: document.getElementById("geProduct").value,
+						designation: document.getElementById("professionalDesignation").value,
+						hcpEmail: document.getElementById("hcpEmail").value,
+						phone: document.getElementById("phoneExtension").value,
+						address: document.getElementById("address").value,
+						state: document.getElementById("state").value,
+						querySubmit: document.getElementById("querySubmitted").value,
+						medAffReqCat: document.getElementById("requestType").value,
+						hcpFirstName: document.getElementById("hcpName").value,
+						hcpLastName: document.getElementById("hcpLastName").value,
+						facility: document.getElementById("facilityAffiliation").value,
+						department: document.getElementById("department").value,
+						city: document.getElementById("city").value,
+						zip: document.getElementById("zip").value,
+						description: document.getElementById("message").value,
+						signature: signatureData,
+					};
+					console.log(formData);
+					fetch("http://localhost:9090/api/v1/medAffair/add", {
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+						},
+						body: JSON.stringify(formData),
+					})
+						.then((response) => {
+							if (!response.ok) {
+								throw new Error(`HTTP error! Status: ${response.status}`);
+							}
+							alert("successfully submit")
+							location.reload();
+							return response.text();
+						})
+						.then((data) => {
+							if (data.status === "ok" && data.message === "User Created Successfully") {
+								console.log("User created successfully");
+							} else {
+								throw new Error("Unexpected server response");
+							}
+						})
+						.catch((error) => {
+							console.error("Error:", error.message);
+						});
+				});
+
+				// Validation function
+				function validateForm() {
+					removeErrorMessages(); // Clear existing error messages
+					const mandatoryFields = [
+						"geProduct",
+						"requestType",
+						"professionalDesignation",
+						"hcpName",
+						"hcpEmail",
+						"facilityAffiliation",
+						"phoneExtension",
+						"city",
+						"zip",
+						"querySubmitted",
+						"message",
+					];
+					let isValid = true;
+
+					for (const fieldId of mandatoryFields) {
+						const field = document.getElementById(fieldId);
+						const errorSpan = document.getElementById(`${fieldId}-error`);
+
+						if (!field.value.trim()) {
+							displayErrorMessage(errorSpan, `${getFieldLabel(fieldId)} is a mandatory field and cannot be empty.`);
+							isValid = false;
+						}
+					}
+
+					const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+					const hcpEmail = document.getElementById("hcpEmail").value;
+					const emailErrorSpan = document.getElementById("hcpEmail-error");
+					if (!emailRegex.test(hcpEmail)) {
+						displayErrorMessage(emailErrorSpan, "Invalid email format in HCP Email field.");
+						isValid = false;
+					}
+
+					const phoneRegex = /^[0-9]+$/;
+					const phoneExtension = document.getElementById("phoneExtension").value;
+					const phoneErrorSpan = document.getElementById("phoneExtension-error");
+					if (!phoneRegex.test(phoneExtension)) {
+						displayErrorMessage(phoneErrorSpan, "Invalid phone format in Phone field.");
+						isValid = false;
+					}
+
+					return isValid;
+				}
+
+				// Function to display error message
+				function displayErrorMessage(element, message) {
+					if (element) {
+						element.textContent = message;
+						element.style.display = "block";
+					} else {
+						console.error("Element is null or undefined");
+					}
+				}
+
+				// Function to remove error messages
+				function removeErrorMessages() {
+					const errorSpans = document.querySelectorAll('.error-message');
+					errorSpans.forEach(span => span.textContent = '');
+				}
+
+				// Function to get field label
+				function getFieldLabel(fieldId) {
+					const labelElement = document.querySelector(`label[for="${fieldId}"]`);
+					return labelElement ? labelElement.textContent : fieldId;
+				}
+			</script>
 		</form>
 		<br>
 		<br>

@@ -9,11 +9,11 @@
 		<version>3.1.3</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.nextscience</groupId>
-	<artifactId>nextscience-service</artifactId>
+	<groupId>com.contactservice</groupId>
+	<artifactId>contact-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>nextscience-service</name>
-	<description>next science service</description>
+	<name>contact-service</name>
+	<description>contact med affairs service</description>
 	<packaging>war</packaging>
 	<properties>
 		<java.version>17</java.version>
@@ -130,6 +130,11 @@
 				<artifactId>jsch</artifactId>
 				<version>0.2.0</version>
 			</dependency>
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -163,6 +168,9 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<image>
+						<builder>paketobuildpacks/builder-jammy-base:latest</builder>
+					</image>
 				</configuration>
 			</plugin>
 		</plugins>
