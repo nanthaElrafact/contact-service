@@ -1,10 +1,10 @@
-package com.nextscience;
+package com.contactservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class NextscienceServiceApplicationTests {
+class ContactServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
